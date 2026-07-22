@@ -6,7 +6,7 @@
     "cases": 2,
     "riskScore": 41,
     "riskLevel": "Medium",
-    "drivers": ["River proximity", "Open drains"],
+    "drivers": ["River proximity", "Temple tank water storage"],
     "recommendedAction": "Fogging & Anti-larval spraying",
     "actioned": false
   },
@@ -31,5 +31,105 @@
     "drivers": ["None"],
     "recommendedAction": "Routine monitoring",
     "actioned": true
+  },
+  {
+    "id": "W4",
+    "name": "Ariyamangalam",
+    "vectorIndex": 72,
+    "cases": 9,
+    "riskScore": 99,
+    "riskLevel": "High",
+    "drivers": ["Proximity to dumpyard", "Stagnant water", "Open drains"],
+    "recommendedAction": "Immediate source reduction & fogging",
+    "actioned": false
+  },
+  {
+    "id": "W5",
+    "name": "Woraiyur",
+    "vectorIndex": 48,
+    "cases": 4,
+    "riskScore": 60,
+    "riskLevel": "Medium",
+    "drivers": ["Dense housing", "Uncovered water storage"],
+    "recommendedAction": "Weekly larval survey & fogging",
+    "actioned": false
+  },
+  {
+    "id": "W6",
+    "name": "Ponmalai (Golden Rock)",
+    "vectorIndex": 30,
+    "cases": 1,
+    "riskScore": 33,
+    "riskLevel": "Low",
+    "drivers": ["Discarded tyres, railway colony"],
+    "recommendedAction": "Routine monitoring",
+    "actioned": true
+  },
+  {
+    "id": "W7",
+    "name": "Thiruvanaikoil",
+    "vectorIndex": 55,
+    "cases": 5,
+    "riskScore": 70,
+    "riskLevel": "High",
+    "drivers": ["Temple tank stagnation", "Poor drainage"],
+    "recommendedAction": "Source reduction & larviciding",
+    "actioned": false
+  },
+  {
+    "id": "W8",
+    "name": "Khajamalai",
+    "vectorIndex": 42,
+    "cases": 3,
+    "riskScore": 51,
+    "riskLevel": "Medium",
+    "drivers": ["Overhead tank leakage"],
+    "recommendedAction": "Anti-larval spraying",
+    "actioned": false
+  },
+  {
+    "id": "W9",
+    "name": "Tennur",
+    "vectorIndex": 38,
+    "cases": 2,
+    "riskScore": 44,
+    "riskLevel": "Medium",
+    "drivers": ["Dense residential", "Water containers"],
+    "recommendedAction": "Fogging & larval survey",
+    "actioned": false
+  },
+  {
+    "id": "W10",
+    "name": "Puthur",
+    "vectorIndex": 25,
+    "cases": 1,
+    "riskScore": 28,
+    "riskLevel": "Low",
+    "drivers": ["Commercial area litter"],
+    "recommendedAction": "Routine monitoring",
+    "actioned": false
+  },
+  {
+    "id": "W11",
+    "name": "Palakkarai",
+    "vectorIndex": 68,
+    "cases": 7,
+    "riskScore": 89,
+    "riskLevel": "High",
+    "drivers": ["Congested market drains", "Stagnant water"],
+    "recommendedAction": "Immediate source reduction",
+    "actioned": false
+  },
+  {
+    "id": "W12",
+    "name": "K.K. Nagar",
+    "vectorIndex": 20,
+    "cases": 0,
+    "riskScore": 20,
+    "riskLevel": "Low",
+    "drivers": ["None"],
+    "recommendedAction": "Routine monitoring",
+    "actioned": true
   }
 ]
+
