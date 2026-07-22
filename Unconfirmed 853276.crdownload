@@ -1,0 +1,20 @@
+"""
+generate_districts.py
+Helper script to map Trichy municipal zones to synthetic wards if needed.
+"""
+import json
+
+zones = ["Srirangam", "Ariyamangalam", "Ponmalai", "K.Abishekapuram"]
+
+def create_zone_mapping():
+    mapping = {}
+    for i in range(1, 51):
+        mapping[f"W{i}"] = zones[i % 4]
+        
+    with open('../data/zone_mapping.json', 'w') as f:
+        json.dump(mapping, f, indent=4)
+        
+    print("Zone mapping created.")
+
+if __name__ == "__main__":
+    create_zone_mapping()

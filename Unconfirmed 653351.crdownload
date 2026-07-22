@@ -1,0 +1,51 @@
+"""
+synthetic_generator.py
+Generates synthetic dataset for the Trichy Vector Watch prototype.
+Creates 50 synthetic wards with heuristic risk scores.
+"""
+import json
+import random
+
+def generate_synthetic_data(num_wards=50):
+    wards = []
+    actions = [
+        "Fogging & source reduction",
+        "Routine monitoring",
+        "Immediate hospital alert & intense fogging",
+        "Public awareness campaign"
+    ]
+    
+    for i in range(1, num_wards + 1):
+        cases = random.randint(0, 20)
+        vector_index = random.randint(10, 80)
+        
+        # Risk Score logic as per constraints
+        risk_score = vector_index + (cases * 3)
+        
+        if risk_score >= 70:
+            risk_level = "High"
+        elif risk_score >= 40:
+            risk_level = "Medium"
+        else:
+            risk_level = "Low"
+            
+        ward = {
+            "id": f"W{i}",
+            "name": f"Ward {i}",
+            "vectorIndex": vector_index,
+            "cases": cases,
+            "riskScore": risk_score,
+            "riskLevel": risk_level,
+            "drivers": ["Synthetic Driver A", "Synthetic Driver B"],
+            "recommendedAction": random.choice(actions),
+            "actioned": False
+        }
+        wards.append(ward)
+        
+    with open('../data/wards.json', 'w') as f:
+        json.dump(wards, f, indent=4)
+        
+    print(f"Successfully generated {num_wards} synthetic wards.")
+
+if __name__ == "__main__":
+    generate_synthetic_data()

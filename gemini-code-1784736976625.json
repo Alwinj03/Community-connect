@@ -1,0 +1,35 @@
+[
+  {
+    "id": "W1",
+    "name": "Srirangam",
+    "vectorIndex": 35,
+    "cases": 2,
+    "riskScore": 41,
+    "riskLevel": "Medium",
+    "drivers": ["River proximity", "Open drains"],
+    "recommendedAction": "Fogging & Anti-larval spraying",
+    "actioned": false
+  },
+  {
+    "id": "W2",
+    "name": "Thillai Nagar",
+    "vectorIndex": 65,
+    "cases": 8,
+    "riskScore": 89,
+    "riskLevel": "High",
+    "drivers": ["Construction site water stagnation"],
+    "recommendedAction": "Immediate source reduction",
+    "actioned": false
+  },
+  {
+    "id": "W3",
+    "name": "Cantonment",
+    "vectorIndex": 15,
+    "cases": 0,
+    "riskScore": 15,
+    "riskLevel": "Low",
+    "drivers": ["None"],
+    "recommendedAction": "Routine monitoring",
+    "actioned": true
+  }
+]

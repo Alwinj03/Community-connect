@@ -1,0 +1,4 @@
+date,ward_id,cases,suspected_fever
+2026-10-01,W1,2,5
+2026-10-01,W2,8,12
+2026-10-01,W3,0,1
