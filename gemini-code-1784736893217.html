@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trichy Vector Watch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="pwa/manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="warning-banner" id="warning-banner">
+        ⚠️ <span data-i18n="warning">SYNTHETIC DEMONSTRATION DATA ONLY. Not for actual public health use.</span>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.svg" alt="Logo" class="logo">
+            <div>
+                <h1 data-i18n="title">Trichy Vector Watch</h1>
+                <p data-i18n="subtitle">Prototype for PHC Dengue Surveillance</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="lang-toggle" class="btn">தமிழ்</button>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <section class="summary-cards">
+            <div class="card stat-card">
+                <h3 data-i18n="totalCases">Total Cases</h3>
+                <p id="stat-cases" class="stat-value">0</p>
+            </div>
+            <div class="card stat-card">
+                <h3 data-i18n="avgVector">Avg Vector Index</h3>
+                <p id="stat-vector" class="stat-value">0</p>
+            </div>
+            <div class="card stat-card">
+                <h3 data-i18n="highRisk">High Risk Wards</h3>
+                <p id="stat-high" class="stat-value error-text">0</p>
+            </div>
+            <div class="card stat-card">
+                <h3 data-i18n="actionsCompleted">Actions Completed</h3>
+                <p id="stat-actions" class="stat-value success-text">0</p>
+            </div>
+        </section>
+
+        <div class="main-grid">
+            <section class="card map-section">
+                <h2 data-i18n="wardMap">Ward Map</h2>
+                <div class="map-container" id="map-container">
+                    <!-- SVG injected via JS -->
+                </div>
+            </section>
+
+            <section class="card list-section">
+                <div class="section-header">
+                    <h2 data-i18n="priorityList">Ward Priority List</h2>
+                    <select id="risk-filter" class="input">
+                        <option value="all" data-i18n="filterAll">All Wards</option>
+                        <option value="High" data-i18n="filterHigh">High Risk</option>
+                        <option value="Medium" data-i18n="filterMedium">Medium Risk</option>
+                        <option value="Low" data-i18n="filterLow">Low Risk</option>
+                    </select>
+                </div>
+                <div class="list-container" id="ward-list"></div>
+            </section>
+        </div>
+
+        <div class="secondary-grid">
+            <section class="card form-section">
+                <h2 data-i18n="obsForm">New Observation</h2>
+                <form id="obs-form">
+                    <div class="form-group">
+                        <label data-i18n="selectWard">Ward</label>
+                        <select id="form-ward" required class="input"></select>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="obsType">Observation Type</label>
+                        <select id="form-type" class="input">
+                            <option value="case" data-i18n="optCase">Dengue Case</option>
+                            <option value="breeding" data-i18n="optBreeding">Breeding Site</option>
+                            <option value="water" data-i18n="optWater">Standing Water</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="notes">Notes</label>
+                        <input type="text" id="form-notes" class="input" placeholder="...">
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="submit">Submit</button>
+                </form>
+            </section>
+
+            <section class="card chart-section">
+                <h2 data-i18n="charts">Risk Distribution</h2>
+                <canvas id="riskChart"></canvas>
+            </section>
+
+            <section class="card flag-section" id="flag-card">
+                <h2 data-i18n="waterFlag">Water Flag Alert</h2>
+                <!-- Populated by JS -->
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
